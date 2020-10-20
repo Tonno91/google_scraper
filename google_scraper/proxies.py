@@ -2,7 +2,7 @@ import os
 import requests
 from lxml.html import fromstring
 
-from selenium import webdriver
+# from selenium import webdriver
 import time
 
 def get_proxies():
@@ -39,13 +39,13 @@ def get_proxies():
 
 
 
-def next_proxy_page():
-    options = webdriver.ChromeOptions()
-    options.add_argument('--ignore-certificate-errors')
-    options.add_argument("--test-type")
-    # options.binary_location = os.getcwd()
-    driver = webdriver.Chrome(options=options)
-    driver.get('https://free-proxy-list.net/')
-
-    python_button = driver.find_element_by_id("proxylisttable_next")
-    print(python_button.click())
+# def next_proxy_page():
+#     options = webdriver.ChromeOptions()
+#     options.add_argument('--ignore-certificate-errors')
+#     options.add_argument("--test-type")
+#     # options.binary_location = os.getcwd()
+#     driver = webdriver.Chrome(options=options)
+#     driver.get('https://free-proxy-list.net/')
+#
+#     python_button = driver.find_element_by_id("proxylisttable_next")
+#     print(python_button.click())

@@ -10,7 +10,7 @@ def load_dict_to_db(address, port, array):
     if score_results(db, array):
         print('******************** UPLOADING START ********************')
     else:
-        print('The position results are all the same. DB not loaded\n')
+        print('\nThe position results are all the same. DB not loaded\n')
         return False
 
     vbv_coll_id = db.insert_many(array)

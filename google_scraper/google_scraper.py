@@ -156,25 +156,11 @@ def gui_panel():
     window.mainloop()
 
 
-# if __name__ == "__main__":
 def main():
-	
     global web_search_site
     web_search_site = {
         "Google": ["https://www.google.com//search?client=firefox-b-d&q=", "https://www.google.it"],
         "Amazon": ["https://www.bing.com/search?form=MOZLBR&pc=MOZI&q=", "https://www.amazon.com"]
     }
-
-    # BSoup_tags = {
-    #     "Google": {
-    #         "contents": 'ZINbbc xpd O9g5cc uUPGi',
-    #         "title": 'BNeawe vvjwJb AP7Wnd',
-    #         "description": 'BNeawe s3v9rd AP7Wnd'
-    #     },
-    #     "Amazon": {
-    #         "contents": 'ZINbbc xpd O9g5cc uUPGi',
-    #         "title": 'BNeawe vvjwJb AP7Wnd',
-    #         "description": 'BNeawe s3v9rd AP7Wnd'}
-    # }
 
     gui_panel()

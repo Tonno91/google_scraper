@@ -1,7 +1,5 @@
-bs4
-threading
-itertools
-requests
-re
-random
-time
+bs4==4.9.3
+lxml==4.6.1
+pymongo==3.11.0
+python==3.8.5
+requests==2.24.0
