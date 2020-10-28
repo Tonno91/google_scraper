@@ -11,7 +11,7 @@ import re
 import random
 import time
 
-import app_gui, mongo_db, proxies
+import app_gui, mongo_db, input_check
 
 
 class c_thread(Thread):
@@ -84,6 +84,9 @@ def web_scraping():
     result_num = window.result_num.get_value()
     key_word = window.key_words.get_value().replace(" ", "+")
 
+    if not input_check.gui_input(website, rep_time, rep_limit, result_num, key_word):
+        return 0
+
     url_website = web_search_site[website]
 
     for repeat_index in range(rep_limit):
@@ -139,7 +142,7 @@ def web_scraping():
 def gui_panel():
     """GUI User Panel main window"""
     global window
-    window = app_gui.MainApplication()
+    window = app_gui.MainApplication("GOOGLE SCRAPER", "pale green")
 
     # Default value in the Panel
     window.website.box.insert(END, "Google")
