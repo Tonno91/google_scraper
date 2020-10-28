@@ -15,6 +15,8 @@ import app_gui, mongo_db, proxies
 
 
 class c_thread(Thread):
+    """Thread always on that in case the start button is pressed
+    make the scraping start"""
     def __init__(self):
         super().__init__()
         self.daemon = True
@@ -27,6 +29,7 @@ class c_thread(Thread):
 
 
 def soup_scraper(url, database, website, key_word, ):
+    """Function that actually scrape the web"""
     try:
         response = requests.get(url)
         print(response, " ", end='')
@@ -77,6 +80,7 @@ def soup_scraper(url, database, website, key_word, ):
 
 
 def web_scraping():
+    """Function that set the delays, loops and print results"""
     # Getting the value insert in the GUI
     website = window.website.box.get()
     rep_time = window.rep_time.get_value()
