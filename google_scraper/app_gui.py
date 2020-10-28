@@ -71,10 +71,10 @@ class Progress_bar(tk.Frame):
 
 
 class MainApplication(tk.Tk):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, title, background):
         super(MainApplication, self).__init__()
-        self.title("        GOOGLE SCRAPER      ")
-        self.configure(background='pale green')
+        self.title("            "+title+"            ")
+        self.configure(background=background)
 
         global myFont
         myFont = {"button": font.Font(family='Helvetica', size=16, weight='bold'),
