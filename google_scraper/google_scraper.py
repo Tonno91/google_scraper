@@ -4,7 +4,6 @@ __all__ = ()
 from bs4 import BeautifulSoup
 from tkinter import END
 from threading import Thread
-from itertools import cycle
 
 from datetime import datetime
 import requests

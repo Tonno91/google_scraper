@@ -70,9 +70,11 @@ class Progress_bar(tk.Frame):
         self.bar['value'] = percentage
 
 
-class MainApplication(tk.Frame):
+class MainApplication(tk.Tk):
     def __init__(self, *args, **kwargs):
-        tk.Frame.__init__(self, *args, **kwargs)
+        super(MainApplication, self).__init__()
+        self.title("        GOOGLE SCRAPER      ")
+        self.configure(background='pale green')
 
         global myFont
         myFont = {"button": font.Font(family='Helvetica', size=16, weight='bold'),
